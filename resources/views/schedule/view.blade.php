@@ -18,7 +18,14 @@
         </tr>
     </thead>
     <tbody>
+    <?php $currentDay = null; ?>
         @foreach($games as $game)
+            @if($currentDay == null || $currentDay == $game->date())
+                <tr>
+                    <td class="center" style="font-weight: bold;" colspan="{{ (isset($edit) && $edit) ? 10 : 9 }}">{{ $game->date() }}</td>
+                </tr>
+            @endif
+            <?php $currentDay = $game->date(); ?>
             <tr>
                 @if(isset($edit) && $edit)
                 <td><a href="/game/{{ $game->id }}/edit/score"><span class="glyphicon glyphicon glyphicon-pencil" aria-hidden="true"></span></a></td>
