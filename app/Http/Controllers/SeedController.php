@@ -10,8 +10,18 @@ use App\Arena;
 
 class SeedController extends Controller
 {
+    
+    public function truncate() 
+    {
+        Arena::all()->delete();
+        Game::all()->delete();
+        Team::all()->delete();
+        Division::all()->delete();
+    }
     public function seed()
     {
+        $this->truncate();
+        
         $a = $this->createDivision("A");
         $b = $this->createDivision("B");
         $b1 = $this->createDivision("B1");
