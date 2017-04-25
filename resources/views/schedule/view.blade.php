@@ -6,7 +6,7 @@
             @if(isset($edit) && $edit)
             <th>&nbsp;</th>
             @endif
-            <th>&nbsp;</th>
+            <th>#</th>
             <th class="hidden-md hidden-lg">Date</th>
             <th class="hidden-xs hidden-sm">Day</th>
             <th class="hidden-xs hidden-sm">Time</th>
