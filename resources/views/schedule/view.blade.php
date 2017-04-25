@@ -23,7 +23,7 @@
         @foreach($games as $game)
             @if($currentDay == null || $currentDay != $game->date())
                 <tr>
-                    <td class="center" style="font-weight: bold; text-transform: uppercase;" colspan="{{ (isset($edit) && $edit) ? 11 : 10 }}">&nbsp;</td>
+                    <td class="center" style="font-weight: bold; text-transform: uppercase; background-color: #e0e0e0;" colspan="{{ (isset($edit) && $edit) ? 11 : 10 }}">&nbsp;</td>
                 </tr>
             @endif
             <?php $currentDay = $game->date(); ?>
