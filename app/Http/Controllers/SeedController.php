@@ -13,10 +13,10 @@ class SeedController extends Controller
     
     public function truncate() 
     {
-        Arena::all()->delete();
-        Game::all()->delete();
-        Team::all()->delete();
-        Division::all()->delete();
+        Arena::truncate();
+        Game::truncate();
+        Team::truncate();
+        Division::truncate();
     }
     public function seed()
     {
