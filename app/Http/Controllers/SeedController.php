@@ -67,24 +67,24 @@ class SeedController extends Controller
         $wingnuts = $this->createTeam("Wingnuts", $b1);
         
         //pour dimanche
-        $1ste1 = $this->createTeam("1st E1", $e);
-        $1ste2 = $this->createTeam("1st E2", $e);
-        $2nde1 = $this->createTeam("2nd E1", $e);
-        $2nde2 = $this->createTeam("2nd E2", $e);
-        $1std = $this->createTeam("1st D", $d);
-        $2ndd = $this->createTeam("2nd D", $d);
-        $3rdd = $this->createTeam("3rd D", $d);
-        $4thd = $this->createTeam("4th D", $d);
-        $1stc1 = $this->createTeam("1st C1", $c);
-        $1stc2 = $this->createTeam("1st C2", $c);
-        $2ndc1 = $this->createTeam("2nd C1", $c);
-        $2ndc2 = $this->createTeam("2nd C2", $c);
-        $1stb1 = $this->createTeam("1st B1", $b);
-        $1stb2 = $this->createTeam("1st B2", $b);
-        $2ndb1 = $this->createTeam("2nd B1", $b);
-        $2ndb2 = $this->createTeam("2nd B2", $b);
-        $1sta = $this->createTeam("1st A", $a);
-        $2nda = $this->createTeam("2nd A", $a);
+        $e11st = $this->createTeam("1st E1", $e);
+        $e21st = $this->createTeam("1st E2", $e);
+        $e12nd = $this->createTeam("2nd E1", $e);
+        $e22nd = $this->createTeam("2nd E2", $e);
+        $d1st = $this->createTeam("1st D", $d);
+        $d2nd = $this->createTeam("2nd D", $d);
+        $d3rd = $this->createTeam("3rd D", $d);
+        $d4th = $this->createTeam("4th D", $d);
+        $c11st = $this->createTeam("1st C1", $c);
+        $c21st = $this->createTeam("1st C2", $c);
+        $c12nd = $this->createTeam("2nd C1", $c);
+        $c22nd = $this->createTeam("2nd C2", $c);
+        $b11st = $this->createTeam("1st B1", $b);
+        $b21st = $this->createTeam("1st B2", $b);
+        $b12nd = $this->createTeam("2nd B1", $b);
+        $b22nd = $this->createTeam("2nd B2", $b);
+        $a1st = $this->createTeam("1st A", $a);
+        $a2nd = $this->createTeam("2nd A", $a);
         $winner60 = $this->createTeam("WINNER #60", $e);
         $winner61 = $this->createTeam("WINNER #61", $e);
         $winner62 = $this->createTeam("WINNER #62", $d);
@@ -228,21 +228,21 @@ class SeedController extends Controller
             ["59", "2017/04/29", "22:00", $b2, $drews, $puck, $arena],
             
             //sunday
-            ["60", "2017/04/30", "9:00", $e, $1ste1, $2nde2, $annex],
-            ["61", "2017/04/30", "9:30", $e, $1ste2, $2nde1, $arena],
-            ["62", "2017/04/30", "10:00", $d, $1sd, $4thd, $annex],
-            ["63", "2017/04/30", "10:30", $d, $2ndd, $3rdd, $arena],
-            ["64", "2017/04/30", "11:00", $c, $1stc2, $2ndc1, $annex],
-            ["65", "2017/04/30", "11:30", $c, $1stc1, $2ndc2, $arena],
-            ["66", "2017/04/30", "12:00", $b, $1stb2, $2ndb1, $annex],
+            ["60", "2017/04/30", "9:00", $e, $e11st, $e22nd, $annex],
+            ["61", "2017/04/30", "9:30", $e, $e21st, $e12nd, $arena],
+            ["62", "2017/04/30", "10:00", $d, $d1st, $d4th, $annex],
+            ["63", "2017/04/30", "10:30", $d, $d2nd, $d3rd, $arena],
+            ["64", "2017/04/30", "11:00", $c, $c21st, $c12nd, $annex],
+            ["65", "2017/04/30", "11:30", $c, $c11st, $c22nd, $arena],
+            ["66", "2017/04/30", "12:00", $b, $b21st, $b12nd, $annex],
             ["67", "2017/04/30", "12:30", $a, $miller, $afternoon, $arena],
-            ["68", "2017/04/30", "13:00", $b, $1stb1, $2ndb2, $annex],
+            ["68", "2017/04/30", "13:00", $b, $b11st, $b22nd, $annex],
             ["69", "2017/04/30", "13:30", $a, $irish, $labatt, $arena],
             ["70", "2017/04/30", "14:00", $e, $winner60, $winner61, $annex],
             ["71", "2017/04/30", "14:30", $c, $winner64, $winner65, $arena],
             ["72", "2017/04/30", "15:00", $d, $winner62, $winner63, $annex],
             ["73", "2017/04/30", "15:30", $b, $winner66, $winner68, $arena],
-            ["74", "2017/04/30", "16:30", $a, $1sta, $2nda, $arena],
+            ["74", "2017/04/30", "16:30", $a, $a1st, $a2nd, $arena],
         ];
 
         foreach($games as $scheduleGame) {
