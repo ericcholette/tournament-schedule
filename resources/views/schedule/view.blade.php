@@ -6,6 +6,7 @@
             @if(isset($edit) && $edit)
             <th>&nbsp;</th>
             @endif
+            <th>&nbsp;</th>
             <th class="hidden-md hidden-lg">Date</th>
             <th class="hidden-xs hidden-sm">Day</th>
             <th class="hidden-xs hidden-sm">Time</th>
@@ -22,7 +23,7 @@
         @foreach($games as $game)
             @if($currentDay == null || $currentDay != $game->date())
                 <tr>
-                    <td class="center" style="font-weight: bold; text-transform: uppercase;" colspan="{{ (isset($edit) && $edit) ? 10 : 9 }}">{{ $game->date() }}</td>
+                    <td class="center" style="font-weight: bold; text-transform: uppercase;" colspan="{{ (isset($edit) && $edit) ? 11 : 10 }}">{{ $game->date() }}</td>
                 </tr>
             @endif
             <?php $currentDay = $game->date(); ?>
@@ -30,6 +31,7 @@
                 @if(isset($edit) && $edit)
                 <td><a href="/game/{{ $game->id }}/edit/score"><span class="glyphicon glyphicon glyphicon-pencil" aria-hidden="true"></span></a></td>
                 @endif
+                <th>{{ $game->game_number }}</th>
                 <td class="hidden-md hidden-lg">{{ $game->small_date() }} {{ $game->time() }}</td>
                 <td class="hidden-xs hidden-sm">{{ $game->date() }}</td>
                 <td class="hidden-xs hidden-sm">{{ $game->time() }}</td>
