@@ -13,11 +13,14 @@ class SeedController extends Controller
     public function seed()
     {
         $a = $this->createDivision("A");
+        $b = $this->createDivision("B");
         $b1 = $this->createDivision("B1");
         $b2 = $this->createDivision("B2");
+        $c = $this->createDivision("C");
         $c1 = $this->createDivision("C1");
         $c2 = $this->createDivision("C2");
         $d = $this->createDivision("D");
+        $e = $this->createDivision("E");
         $e1 = $this->createDivision("E1");
         $e2 = $this->createDivision("E2");
 
@@ -62,6 +65,35 @@ class SeedController extends Controller
         $afternoon = $this->createTeam("Afternoon Delight", $a);
         $rumble = $this->createTeam("Rumble in the Jungle", $b1);
         $wingnuts = $this->createTeam("Wingnuts", $b1);
+        
+        //pour dimanche
+        $1ste1 = $this->createTeam("1st E1", $e);
+        $1ste2 = $this->createTeam("1st E2", $e);
+        $2nde1 = $this->createTeam("2nd E1", $e);
+        $2nde2 = $this->createTeam("2nd E2", $e);
+        $1std = $this->createTeam("1st D", $d);
+        $2ndd = $this->createTeam("2nd D", $d);
+        $3rdd = $this->createTeam("3rd D", $d);
+        $4thd = $this->createTeam("4th D", $d);
+        $1stc1 = $this->createTeam("1st C1", $c);
+        $1stc2 = $this->createTeam("1st C2", $c);
+        $2ndc1 = $this->createTeam("2nd C1", $c);
+        $2ndc2 = $this->createTeam("2nd C2", $c);
+        $1stb1 = $this->createTeam("1st B1", $b);
+        $1stb2 = $this->createTeam("1st B2", $b);
+        $2ndb1 = $this->createTeam("2nd B1", $b);
+        $2ndb2 = $this->createTeam("2nd B2", $b);
+        $1sta = $this->createTeam("1st A", $a);
+        $2nda = $this->createTeam("2nd A", $a);
+        $winner60 = $this->createTeam("WINNER #60", $e);
+        $winner61 = $this->createTeam("WINNER #61", $e);
+        $winner62 = $this->createTeam("WINNER #62", $d);
+        $winner63 = $this->createTeam("WINNER #63", $d);
+        $winner64 = $this->createTeam("WINNER #64", $c);
+        $winner65 = $this->createTeam("WINNER #65", $c);
+        $winner66 = $this->createTeam("WINNER #66", $b);
+        $winner68 = $this->createTeam("WINNER #68", $b);
+        
 
         $arena = $this->createArena("ARENA");
         $annex = $this->createArena("ANNEX");
@@ -76,7 +108,7 @@ class SeedController extends Controller
             ["4", "2017/04/26", "19:30", $e1, $eagles, $tenequip, $annex],
             ["5", "2017/04/26", "20:00", $b2, $drews, $annies, $arena],
             ["6", "2017/04/26", "20:30", $d, $nova, $bopelouse, $annex],
-            ["7", "2017/04/26", "21:00", $a, $miller, $bar, $arena],
+            ["7", "2017/04/26", "21:00", $a, $ccm, $miller, $arena],
             ["8", "2017/04/26", "21:30", $d, $reebok, $unlimited, $annex],
             ["9", "2017/04/26", "22:00", $e1, $xstars, $patriotes, $arena],
             ["10", "2017/04/26", "22:30", $e2, $referees, $mda, $annex],
@@ -94,16 +126,15 @@ class SeedController extends Controller
             19 Thu/Jeu 22:00 A CCM - Bar Stars ARENA
             20 Thu/Jeu 22:30 D Eskimoes - Van Buren Boys ANNEX
             **/
-            ["11", "2017/04/27", "18:00", $b2, $drews, $blues, $arena],
-            ["12", "2017/04/27", "18:30", $c2, $plugs, $dirtbags, $annex],
-            ["13", "2017/04/27", "19:00", $b1, $rumble, $dirty, $arena],
-            ["14", "2017/04/27", "19:30", $e1, $patriotes, $eagles, $annex],
-            ["15", "2017/04/27", "20:00", $a, $miller, $labatt, $arena],
-            ["16", "2017/04/27", "20:30", $c1, $saints, $cunningham, $annex],
-            ["17", "2017/04/27", "21:00", $e2, $eliminators, $referees, $arena],
-            ["18", "2017/04/27", "21:30", $d, $reebok, $wildcats, $annex],
-            ["19", "2017/04/27", "22:00", $a, $ccm, $bar, $arena],
-            ["20", "2017/04/27", "22:30", $d, $eskimoes, $van, $annex],
+            ["11", "2017/04/27", "18:30", $b2, $drews, $blues, $annex],
+            ["12", "2017/04/27", "19:00", $c2, $plugs, $dirtbags, $arena],
+            ["13", "2017/04/27", "19:30", $d, $eskimoes, $van, $annex],
+            ["14", "2017/04/27", "20:00", $e1, $patriotes, $eagles, $arena],
+            ["15", "2017/04/27", "20:30", $c1, $saints, $cunningham, $annex],
+            ["16", "2017/04/27", "21:00", $b1, $rumble, $dirty, $arena],
+            ["17", "2017/04/27", "21:30", $e2, $eliminators, $referees, $annex],
+            ["18", "2017/04/27", "22:00", $a, $labatt, $ccm, $arena],
+            ["19", "2017/04/27", "22:30", $d, $reebok, $wildcats, $annex],
             //friday
             /*
             21 Fri/Ven 17:30 C2 Dirtbags - Shootout in the Annex ANNEX
@@ -119,18 +150,20 @@ class SeedController extends Controller
             31 Fri/Ven 22:30 D Nova Scotia Voyageurs - Dagwoods ANNEX
             32 Fri/Ven 23:00 A Afternoon Delight - CCM ARENA
             **/
-            ["21", "2017/04/28", "17:30", $c2, $dirtbags, $shootout, $annex],
-            ["22", "2017/04/28", "18:00", $b2, $annies, $puck, $arena],
-            ["23", "2017/04/28", "18:30", $c2, $capitals, $plugs, $annex],
-            ["24", "2017/04/28", "19:00", $e2, $winnie, $eliminators, $arena],
-            ["25", "2017/04/28", "19:30", $d, $aqua, $bopelouse, $annex],
-            ["26", "2017/04/28", "20:00", $e1, $xstars, $tenequip, $arena],
-            ["27", "2017/04/28", "20:30", $d, $vermont, $van, $annex],
-            ["28", "2017/04/28", "21:00", $b1, $nolans, $wingnuts, $arena],
-            ["29", "2017/04/28", "21:30", $c1, $rockets, $saints, $annex],
-            ["30", "2017/04/28", "22:00", $a, $labatt, $irish, $arena],
-            ["31", "2017/04/28", "22:30", $d, $nova, $dagwoods, $annex],
-            ["32", "2017/04/28", "23:00", $a, $afternoon, $ccm, $arena],
+            ["20", "2017/04/28", "17:30", $c2, $dirtbags, $shootout, $annex],
+            ["21", "2017/04/28", "18:00", $b2, $annies, $puck, $arena],
+            ["22", "2017/04/28", "18:30", $d, $nova, $dagwoods, $annex],
+            ["23", "2017/04/28", "19:00", $c2, $capitals, $plugs, $arena],
+            ["24", "2017/04/28", "19:30", $e2, $winnie, $eliminators, $annex],
+            ["25", "2017/04/28", "20:00", $d, $aqua, $bopelouse, $arena],
+            ["26", "2017/04/28", "20:30", $e1, $xstars, $tenequip, $annex],
+            ["27", "2017/04/28", "21:00", $d, $vermont, $van, $arena],
+            ["28", "2017/04/28", "21:30", $b1, $dirty, $nolans, $annex],
+            ["29", "2017/04/28", "22:00", $a, $afternoon, $ccm, $arena],
+            ["30", "2017/04/28", "22:30", $c1, $rockets, $saints, $annex],
+            ["31", "2017/04/28", "23:00", $a, $miller, $irish, $arena],
+            ["32", "2017/04/28", "23:30", $b1, $rumble, $wingnuts, $annex],
+            
             //saturday
             /*
             - Sat/Sam 8:00 X ARENA
@@ -142,13 +175,13 @@ class SeedController extends Controller
             38 Sat/Sam 11:00 E2 Winnie Ted Jets - MDA Space ARENA
             39 Sat/Sam 11:30 B2 Blues - Annies ANNEX
             **/
-            ["33", "2017/04/29", "08:30", $b1, $dirty, $nolans, $annex],
-            ["34", "2017/04/29", "09:00", $d, $eskimoes, $aqua, $arena],
-            ["35", "2017/04/29", "09:30", $b1, $rumble, $wingnuts, $annex],
-            ["36", "2017/04/29", "10:00", $d, $vermont, $unlimited, $arena],
-            ["37", "2017/04/29", "10:30", $e1, $tenequip, $patriotes, $annex],
-            ["38", "2017/04/29", "11:00", $e2, $winnie, $mda, $arena],
-            ["39", "2017/04/29", "11:30", $b1, $blues, $annies, $annex],
+            //["33", "2017/04/29", "08:30", $b1, $dirty, $nolans, $annex],
+            ["33", "2017/04/29", "09:00", $d, $nova, $eskimoes, $arena],
+            ["34", "2017/04/29", "09:30", $b1, $nolans, $wingnuts, $annex],
+            ["35", "2017/04/29", "10:00", $e1, $tenequip, $patriotes, $arena],
+            ["36", "2017/04/29", "10:30", $d, $vermont, $aqua, $annex],
+            ["37", "2017/04/29", "11:00", $e2, $winnie, $mda, $arena],
+            ["38", "2017/04/29", "11:30", $b2, $blues, $annies, $annex],
             /*
             40 Sat/Sam 12:00 C1 Hogan's Heroes - Rockets ARENA
             41 Sat/Sam 12:30 D Reebok - Dagwoods ANNEX
@@ -160,16 +193,16 @@ class SeedController extends Controller
             47 Sat/Sam 15:30 D Vermont - Aquahydrate ANNEX
             48 Sat/Sam 16:00 B1 Wingnuts - Dirty Birds ARENA
             49 Sat/Sam 16:30 C2 Shootout in the Annex - The Plugs ANNEX*/
-            ["40", "2017/04/29", "12:00", $c1, $hogan, $rockets, $arena],
-            ["41", "2017/04/29", "12:30", $d, $reebok, $dagwoods, $annex],
-            ["42", "2017/04/29", "13:00", $a, $irish, $afternoon, $arena],
-            ["43", "2017/04/29", "13:30", $c2, $capitals, $dirtbags, $annex],
-            ["44", "2017/04/29", "14:00", $d, $wildcats, $bopelouse, $arena],
-            ["45", "2017/04/29", "14:30", $d, $nova, $eskimoes, $annex],
-            ["46", "2017/04/29", "15:00", $b1, $rumble, $nolans, $arena],
-            ["47", "2017/04/29", "15:30", $d, $vermont, $aqua, $annex],
-            ["48", "2017/04/29", "16:00", $b1, $wingnuts, $dirty, $arena],
-            ["49", "2017/04/29", "16:30", $c2, $shootout, $plugs, $annex],
+            ["39", "2017/04/29", "12:00", $c1, $hogan, $rockets, $arena],
+            ["40", "2017/04/29", "12:30", $d, $reebok, $dagwoods, $annex],
+            ["41", "2017/04/29", "13:00", $a, $labatt, $miller, $arena],
+            ["42", "2017/04/29", "13:30", $d, $wildcats, $bopelouse, $annex],
+            ["43", "2017/04/29", "14:00", $a, $irish, $afternoon, $arena],
+            ["44", "2017/04/29", "14:30", $c2, $capitals, $dirtbags, $annex],
+            ["45", "2017/04/29", "15:00", $b1, $wingnuts, $dirty, $arena],
+            ["46", "2017/04/29", "15:30", $c2, $shootout, $plugs, $annex],
+            ["47", "2017/04/29", "16:00", $a, $ccm, $irish, $arena],
+            ["48", "2017/04/29", "16:30", $d, $vermont, $unlimited, $annex],
             /*
             50 Sat/Sam 17:00 C1 Hogan's Heroes - The Saints ARENA
             51 Sat/Sam 17:30 E2 Winnie Ted Jets - Referees ANNEX
@@ -182,17 +215,34 @@ class SeedController extends Controller
             58 Sat/Sam 21:00 D Wildcats - Dagwoods ARENA
             59 Sat/Sam 21:30 D Unlimited Media - Van Buren Boys ANNEX
             60 Sat/Sam 22:00 B2 Drews Castle Tours - Puck Buddies ARENA*/
-            ["50", "2017/04/29", "17:00", $c1, $hogan, $saints, $arena],
-            ["51", "2017/04/29", "17:30", $e2, $winnie, $referees, $annex],
-            ["52", "2017/04/29", "18:00", $a, $miller, $ccm, $arena],
-            ["53", "2017/04/29", "18:30", $e2, $mda, $eliminators, $annex],
-            ["54", "2017/04/29", "19:00", $a, $afternoon, $labatt, $arena],
-            ["55", "2017/04/29", "19:30", $e1, $xstars, $eagles, $arena],
-            ["56", "2017/04/29", "20:00", $a, $bar, $irish, $arena],
-            ["57", "2017/04/29", "20:30", $c1, $cunningham, $rockets, $annex],
-            ["58", "2017/04/29", "21:00", $d, $wildcats, $dagwoods, $arena],
-            ["59", "2017/04/29", "21:30", $d, $unlimited, $van, $annex],
-            ["60", "2017/04/29", "22:00", $b2, $drews, $puck, $arena],
+            ["49", "2017/04/29", "17:00", $c1, $hogan, $saints, $arena],
+            ["50", "2017/04/29", "17:30", $e2, $winnie, $referees, $annex],
+            ["51", "2017/04/29", "18:00", $a, $afternoon, $labatt, $arena],
+            ["52", "2017/04/29", "18:30", $e2, $mda, $eliminators, $annex],
+            ["53", "2017/04/29", "19:00", $d, $eskimoes, $aqua, $arena],
+            ["54", "2017/04/29", "19:30", $e1, $xstars, $eagles, $arena],
+            ["55", "2017/04/29", "20:00", $b1, $rumble, $nolans, $arena],
+            ["56", "2017/04/29", "20:30", $c1, $cunningham, $rockets, $annex],
+            ["57", "2017/04/29", "21:00", $d, $wildcats, $dagwoods, $arena],
+            ["58", "2017/04/29", "21:30", $d, $unlimited, $van, $annex],
+            ["59", "2017/04/29", "22:00", $b2, $drews, $puck, $arena],
+            
+            //sunday
+            ["60", "2017/04/30", "9:00", $e, $1ste1, $2nde2, $annex],
+            ["61", "2017/04/30", "9:30", $e, $1ste2, $2nde1, $arena],
+            ["62", "2017/04/30", "10:00", $d, $1sd, $4thd, $annex],
+            ["63", "2017/04/30", "10:30", $d, $2ndd, $3rdd, $arena],
+            ["64", "2017/04/30", "11:00", $c, $1stc2, $2ndc1, $annex],
+            ["65", "2017/04/30", "11:30", $c, $1stc1, $2ndc2, $arena],
+            ["66", "2017/04/30", "12:00", $b, $1stb2, $2ndb1, $annex],
+            ["67", "2017/04/30", "12:30", $a, $miller, $afternoon, $arena],
+            ["68", "2017/04/30", "13:00", $b, $1stb1, $2ndb2, $annex],
+            ["69", "2017/04/30", "13:30", $a, $irish, $labatt, $arena],
+            ["70", "2017/04/30", "14:00", $e, $winner60, $winner61, $annex],
+            ["71", "2017/04/30", "14:30", $c, $winner64, $winner65, $arena],
+            ["72", "2017/04/30", "15:00", $d, $winner62, $winner63, $annex],
+            ["73", "2017/04/30", "15:30", $b, $winner66, $winner68, $arena],
+            ["74", "2017/04/30", "16:30", $a, $1sta, $2nda, $arena],
         ];
 
         foreach($games as $scheduleGame) {
